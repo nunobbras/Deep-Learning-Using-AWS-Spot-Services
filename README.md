@@ -1,12 +1,12 @@
 
-#Deep Learning over GPU Servers at AWS
+# Deep Learning over GPU Servers at AWS
 
 This code was used to produce the article "Clustering Low-Cost, Cloud-Based Servers to Solve Intensive, Parallel Computations" by Nuno B. Bras and Goncalo Valadao from Instituto de Telecomunicac ̧o ̃es (IT) and Universidade Auto ́noma de Lisboa (UAL) Lisboa, Portugal.
 
 This paper advocates the usage of available cloud based services for intensive parallel floating point computations, based on clusters of servers installed with Graphical Processing Units (GPUs), in order to run low-cost, High Performance Computing (HPC) tasks.
 It is described a cluster of multiple servers installed with GPU units and running open-source software which works as an easy to scale, low cost platform with centralized Master-Slave control, able to turn on/off the Slaves (GPU server machines) as needed.
 
-###Used Technologies:
+### Used Technologies:
 
 - **Amazon Web Services (AWS) with AWS Spot Services**
 AWS Spot Services offer a new modality which presents much lower prices. Essentially it consists of serving unused processing power and its price can be much lower than of a normal, reserved, GPU server instances [6].
@@ -24,7 +24,7 @@ Send direct iPython parallel messages from the master to any set of engines inst
  Theano is always used, even when GPUs are not available, and Theano itself chooses what should be used: CPU or GPUs.
 
  
-###Underlying Problem
+### Underlying Problem
 
 The underlying problem is a character classification problem, over the MNIST dataset. This problem was often used to benchmark algorithms because it was already deeply studied. The MNIST has a training set of 60 000 characters, a testing set of 10 000 characters, having each image 28 × 28 pixels.
 Here, the problem is solved using a deep neural network described in [14], composed of the following layers:
